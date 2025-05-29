@@ -11,7 +11,7 @@
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  background-color: rgba(0, 0, 0, 0.6); 
   z-index: 0;
 }
 
@@ -21,9 +21,9 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1); /* optional soft white tint */
+  background-color: rgba(255, 255, 255, 0.1); 
   padding: 2rem;
   border-radius: 10px;
-  backdrop-filter: blur(4px); /* adds modern glass effect */
+  backdrop-filter: blur(4px);
 }
 

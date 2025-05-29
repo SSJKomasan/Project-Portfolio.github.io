@@ -4,8 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jabot Dixon's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #0044cc;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .about {
+      background-color: #fffbe6;
+      border-left: 5px solid #ffcc00;
+    }
+
+    .projects {
+      background-color: #e6f0ff;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .project {
+      background: white;
+      border: 2px solid #0044cc;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      background-color: #d9e6ff;
+    }
+
+    .project h3 {
+      margin-top: 0;
+      color: #0044cc;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .project a:hover {
+      background-color: #ffd633;
+    }
+
+    footer {
+      background-color: #0044cc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,12 +100,12 @@
     <p>Mt. Eden High School Monarch</p>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <h2>About Me</h2>
     <p>
-My name is Jabot Dixon and I am a Junior at Mt.Eden High School
-I enjoy hobbies such as listening to music along with playing Video games
-I hope that one day I go the Cyber Security route and make a lot of money
+      My name is Jabot Dixon and I am a Junior at Mt. Eden High School.
+      I enjoy hobbies such as listening to music and playing video games.
+      I hope to go into Cyber Security and make a great living doing what I love.
     </p>
   </section>
 
@@ -28,27 +114,28 @@ I hope that one day I go the Cyber Security route and make a lot of money
     <div class="project-grid">
       <div class="project">
         <h3>Password Generator</h3>
-        <p>A Password Generator app that helps you make safe passwords for accounts.</p>
-        <a href="https://codepen.io/SSJKomasan/pen/KwKaKXw" target="_blank">Try Password Generator</a>
+        <p>An app that helps you create strong and secure passwords for your accounts.</p>
+        <a href="https://codepen.io/SSJKomasan/pen/KwKaKXw" target="_blank">Try It</a>
       </div>
 
       <div class="project">
         <h3>Black Jack</h3>
-        <p>A Black Jack game that is fun and playable.</p>
-        <a href="https://codepen.io/SSJKomasan/pen/raNyaZJ" target="_blank">Play Black Jack</a>
+        <p>A simple and fun Black Jack game you can play right in your browser.</p>
+        <a href="https://codepen.io/SSJKomasan/pen/raNyaZJ" target="_blank">Play It</a>
       </div>
 
       <div class="project">
         <h3>Calculator</h3>
-        <p>A classic and simple Calculator.</p>
-        <a href="https://codepen.io/SSJKomasan/pen/KwKQpwG" target="_blank">Play Dino Jump</a>
+        <p>A classic calculator for basic arithmetic operations.</p>
+        <a href="https://codepen.io/SSJKomasan/pen/KwKQpwG" target="_blank">Use It</a>
       </div>
 
       <div class="project">
         <h3>Guess the Flag</h3>
-        <p>A simple game where the user is to guess the Flag.</p>
-        <a href="https://codepen.io/SSJKomasan/pen/pvoZJmL" target="_blank">Try the Survival Game</a>
+        <p>Test your geography knowledge by guessing country flags.</p>
+        <a href="https://codepen.io/SSJKomasan/pen/pvoZJmL" target="_blank">Play Now</a>
       </div>
+    </div>
   </section>
 
   <footer>
@@ -57,4 +144,3 @@ I hope that one day I go the Cyber Security route and make a lot of money
 
 </body>
 </html>
-

@@ -6,102 +6,139 @@
   <title>Jabot Dixon's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --blue: #0044cc;
+      --yellow: #ffcc00;
+      --light: #f9f9f9;
+      --dark: #111;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html, body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fdfdfd;
-      color: #222;
       scroll-behavior: smooth;
+      background-color: var(--light);
+      color: var(--dark);
     }
 
     header {
-      background-color: #0044cc;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('bg.jpg') center/cover no-repeat;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 6rem 2rem;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
     header p {
-      margin: 0.5rem 0 0;
       font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background-color: var(--blue);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
     }
 
     section {
-      padding: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .about {
-      position: relative;
-      background-image: url('https://chicagomaroon.com/wp-content/uploads/2020/07/last_of_us_part_ii-900x481.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 4rem 2rem;
-    }
-
-    .about::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-
-    .about-overlay {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 2rem;
-      border-radius: 10px;
-      backdrop-filter: blur(4px);
+      text-align: center;
     }
 
-    .projects {
-      background-color: #e6f0ff;
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--blue);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--blue);
+      margin-bottom: 2rem;
     }
 
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 2rem;
     }
 
     .project {
       background: white;
-      border: 2px solid #0044cc;
+      border: 1px solid #ddd;
       border-radius: 10px;
-      padding: 1rem;
-      transition: transform 0.2s;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .project:hover {
-      transform: scale(1.05);
-      background-color: #d9e6ff;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
     .project h3 {
-      margin-top: 0;
-      color: #0044cc;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: #333;
     }
 
     .project a {
       display: inline-block;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       text-decoration: none;
-      background-color: #ffcc00;
-      color: #000;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
+      background-color: var(--yellow);
+      color: black;
       font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
 
     .project a:hover {
@@ -109,62 +146,72 @@
     }
 
     footer {
-      background-color: #0044cc;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      background-color: var(--blue);
+      color: white;
+      padding: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Jabot Dixon's Portfolio</h1>
+    <p>Junior @ Mt. Eden High School • Future Cyber Security Expert</p>
   </header>
 
   <section class="about" id="about">
-    <div class="about-overlay">
-      <h2>About Me</h2>
-      <p>
-        My name is Jabot Dixon and I am a Junior at Mt. Eden High School.
-        I enjoy hobbies such as listening to music and playing video games.
-        I hope to go into Cyber Security and make a great living doing what I love while also being happy where my life goes after
-      </p>
-    </div>
+    <h2>About Me</h2>
+    <p>
+      My name is Jabot Dixon and I am a Junior at Mt. Eden High School.
+      I enjoy listening to music and playing video games.
+      I hope to pursue a career in Cyber Security and make a strong impact in tech.
+    </p>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
     <div class="project-grid">
       <div class="project">
         <h3>Password Generator</h3>
-        <p>An app that helps you create strong and secure passwords for your accounts.</p>
+        <p>Create strong and secure passwords for your accounts.</p>
         <a href="https://codepen.io/SSJKomasan/pen/KwKaKXw" target="_blank">Try It</a>
       </div>
 
       <div class="project">
         <h3>Black Jack</h3>
-        <p>A simple and fun Black Jack game you can play right in your browser.</p>
+        <p>A fun and functional Black Jack game to test your luck!</p>
         <a href="https://codepen.io/SSJKomasan/pen/raNyaZJ" target="_blank">Play It</a>
       </div>
 
       <div class="project">
         <h3>Calculator</h3>
-        <p>A classic calculator for basic arithmetic operations.</p>
+        <p>A sleek calculator for your everyday math needs.</p>
         <a href="https://codepen.io/SSJKomasan/pen/KwKQpwG" target="_blank">Use It</a>
       </div>
 
       <div class="project">
         <h3>Guess the Flag</h3>
-        <p>Test your geography knowledge by guessing country flags.</p>
+        <p>Test your geography skills by guessing country flags!</p>
         <a href="https://codepen.io/SSJKomasan/pen/pvoZJmL" target="_blank">Play Now</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Jabot | Jabot's Website</p>
+    <p>© 2025 Jabot Dixon | Built with HTML & CSS</p>
   </footer>
 
 </body>

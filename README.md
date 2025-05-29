@@ -3,8 +3,7 @@
 ## About the Developer
 
 Hi, I'm Jabot D – My name is Jabot Dixon and I am a Junior at Mt.Eden High School I enjoy hobbies such as listening to music along with playing Video games I hope that one day I go the Cyber Security route and make a lot of money
-
-
+So far, from the beginning of the class until now, I have learned a lot about coding as a whole. I’ve gained knowledge about different types of coding languages such as C++, JavaScript, and HTML, and I’ve also learned about the unique things each language can do. Not only have I expanded my understanding of coding, but I’ve also discovered that I want to further pursue a career in it and maybe even major in it in the future.
 
 ## Project Summary
 
